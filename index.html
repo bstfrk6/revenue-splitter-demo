@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Revenue Split Demo</title>
+  <style>
+    body { font-family: sans-serif; max-width: 500px; margin: 2em auto; }
+    input, button { width: 100%; padding: 0.5em; margin: 0.5em 0; }
+    pre { background: #f4f4f4; padding: 1em; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>Revenue Split Demo (Goerli)</h2>
+
+  <label>Contract Address
+    <input id="contractAddress"
+           placeholder="0x…"
+           value="0x94647b8c0C18215e915738E341081B82f78Cc4Aa"/>
+  </label>
+
+  <label>Payee 1 Address
+    <input id="payee1"
+           placeholder="0x…"
+           value="0x6BAAD97738ff482344c8176196F734bfd59F853e"/>
+  </label>
+
+  <label>Payee 2 Address
+    <input id="payee2"
+           placeholder="0x…"
+           value="0xE1f91404f2E39ad022771e3D3c93939bCF3c2ef0"/>
+  </label>
+
+  <label>Amount to Split (ETH)
+    <input id="amount" value="0.01"/>
+  </label>
+
+  <button id="splitBtn">Split Revenue</button>
+
+  <pre id="output">Connect your wallet and click “Split Revenue”…</pre>
+
+  <!-- ethers.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
